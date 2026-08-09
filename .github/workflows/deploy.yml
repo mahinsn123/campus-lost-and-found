@@ -28,14 +28,10 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
+      - name: Install & Build
         run: |
           cd frontend
-          npm ci
-
-      - name: Build
-        run: |
-          cd frontend
+          npm install
           npm run build
 
       - name: Setup Pages
